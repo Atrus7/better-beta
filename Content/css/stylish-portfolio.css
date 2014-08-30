@@ -155,6 +155,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
+    color: #fff;
     background: url(../img/amazing_blue_1920x1200.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
