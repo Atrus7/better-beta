@@ -259,9 +259,10 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
       lastMessage = {
         type: "cursor-update",
         top: pageY,
-        left: pageX
+        left: pageX,
+		timestamp: Date.now()
       };
-      session.send(lastMessage);
+     alert(lastMessage.timestamp);
       return;
     }
     target = $(target);
@@ -281,7 +282,7 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
       offsetY: Math.floor(offsetY), 
       timestamp: Date.now(),
     };
-    session.store(lastMessage);
+    alert(lastMessage.timestamp);
   }
 
   function makeCursor(color) {
