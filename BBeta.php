@@ -8,7 +8,6 @@
 <script>
         $('document').ready(function() {
             TogetherJS();
-            TogetherJS();
         });
 </script>
 
