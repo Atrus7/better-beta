@@ -47,7 +47,7 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
     // user typing.  This should be more than MIN_KEYDOWN_TIME:
     KEYDOWN_WAIT_TIME: 2000,
 
-    updatePeer: function (peer) {
+    updatePeer: function (peer) { 
       // FIXME: can I use peer.setElement()?
       this.element.css({color: peer.color});
       var img = this.element.find("img.togetherjs-cursor-img");

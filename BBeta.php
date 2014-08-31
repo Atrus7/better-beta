@@ -9,7 +9,6 @@
 <script>
 function store(something)
 {
-
    $.ajax({
           type: 'POST',
           url: 'Beta-recorder.php',
