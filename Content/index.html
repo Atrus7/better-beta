@@ -91,11 +91,26 @@
                     <hr class="small">
                     <div class="row">
         <div class="container">
-            <p> <i class="fa fa-camera-retro fa-lg"></i> fa-lg
-<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-<i class="fa fa-camera-retro fa-5x"></i> fa-5x </p>
+            if (firstInstSelected == "C" && secondInstSelected == "Bb") {
+                    if (firstNote == "A" && secondNote == undefined) {
+                        $('#' + btnLabelSelected).find('.noteName').text("B");
+                        $('#' + btnLabelSelected).find('.supNote').text("");
+                        return false;
+                    }
+                    if (firstNote == "A" && secondNote == "sharp" || firstNote == "B" && secondNote == "flat") {
+                        $('#' + btnLabelSelected).find('.noteName').text("C");
+                        $('#' + btnLabelSelected).find('.supNote').text("");
+                        return false;
+                    }
+                    if (firstNote == "B" && secondNote == undefined) {
+                        $('#' + btnLabelSelected).find('.noteName').text("C");
+                        $('#' + btnLabelSelected).find('.supNote').text("#");
+                        return false;
+                    }
+                    if (firstNote == "C" && secondNote == undefined) {
+                        $('#' + btnLabelSelected).find('.noteName').text("D");
+                        $('#' + btnLabelSelected).find('.supNote').text("");
+                        return false;
         </div>
         <!-- /.container -->
     </section>
