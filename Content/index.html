@@ -92,22 +92,13 @@
                     <hr class="small">
                     <div class="row">
             <div class="col-md-3 col-sm-6">
-                            <div class="service-item text-left">
+                            <div class="service-item text-center">
                 if (firstInstSelected == "C" && secondInstSelected == "Bb") {
                     if (firstNote == "A" && secondNote == undefined) {
                         $('#' + btnLabelSelected).find('.noteName').text("B");
                         $('#' + btnLabelSelected).find('.supNote').text("");
                         return false;
-                    }
-                    if (firstNote == "A" && secondNote == "sharp" || firstNote == "B" && secondNote == "flat") {
-                        $('#' + btnLabelSelected).find('.noteName').text("C");
-                        $('#' + btnLabelSelected).find('.supNote').text("");
-                        return false;
-                    }
-                    if (firstNote == "B" && secondNote == undefined) {
-                        $('#' + btnLabelSelected).find('.noteName').text("C");
-                        $('#' + btnLabelSelected).find('.supNote').text("#");
-                        return false;
+                
         </div>
         <!-- /.container -->
     </section>
