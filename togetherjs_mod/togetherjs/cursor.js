@@ -250,6 +250,8 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
     lastPosY = pageY;
     var target = event.target;
     var parent = $(target).closest(".togetherjs-window, .togetherjs-popup, #togetherjs-dock");
+	var time = new Date(Date.now());
+	
     if (parent.length) {
       target = parent[0];
     } else if (elementFinder.ignoreElement(target)) {
@@ -260,7 +262,7 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
         type: "cursor-update",
         top: pageY,
         left: pageX,
-		timestamp: Date.now()
+		timestamp: time.getSeconds() //+ "." + time.getMilliseconds()
       };
      alert(lastMessage.timestamp);
       return;
@@ -275,13 +277,16 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
     }
     var offsetX = pageX - offset.left;
     var offsetY = pageY - offset.top;
+	
+	
+	
     lastMessage = {
       type: "cursor-update",
       element: elementFinder.elementLocation(target),
       offsetX: Math.floor(offsetX),
       offsetY: Math.floor(offsetY), 
-      timestamp: Date.now(),
-    };
+      timestamp: time.getSeconds()// + "." + time.getMilliseconds()
+	  };
     alert(lastMessage.timestamp);
   }
 
