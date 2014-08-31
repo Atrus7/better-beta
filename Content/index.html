@@ -185,13 +185,25 @@
             </div>
         </div>
     </footer>
-
+	
+	
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/jquery.ripples.js"></script>
+	
+	<script>	
+		$(document).ready(function() {
+			$('.img-responsive').ripples({
+			resolution: 256,
+			perturbance: 0.04
+			});
+		});
+	</script>
     <!-- Custom Theme JavaScript -->
     <script>
     // Closes the sidebar menu
@@ -223,6 +235,10 @@
         });
     });
     </script>
+	
+	
+	
+
 
 </body>
 
