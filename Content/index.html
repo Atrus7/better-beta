@@ -91,26 +91,11 @@
                     <hr class="small">
                     <div class="row">
         <div class="container text-left">
-            if (firstInstSelected == "C" && secondInstSelected == "Bb") {
-                    if (firstNote == "A" && secondNote == undefined) {
-                        $('#' + btnLabelSelected).find('.noteName').text("B");
-                        $('#' + btnLabelSelected).find('.supNote').text("");
-                        return false;
-                    }
-                    if (firstNote == "A" && secondNote == "sharp" || firstNote == "B" && secondNote == "flat") {
-                        $('#' + btnLabelSelected).find('.noteName').text("C");
-                        $('#' + btnLabelSelected).find('.supNote').text("");
-                        return false;
-                    }
-                    if (firstNote == "B" && secondNote == undefined) {
-                        $('#' + btnLabelSelected).find('.noteName').text("C");
-                        $('#' + btnLabelSelected).find('.supNote').text("#");
-                        return false;
-                    }
-                    if (firstNote == "C" && secondNote == undefined) {
-                        $('#' + btnLabelSelected).find('.noteName').text("D");
-                        $('#' + btnLabelSelected).find('.supNote').text("");
-                        return false;
+            <script>
+              // TogetherJS configuration would go here, but we'll talk about that
+              // later
+            </script>
+            <script src="https://togetherjs.com/togetherjs-min.js"></script>
         </div>
         <!-- /.container -->
     </section>
