@@ -264,7 +264,7 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
         left: pageX,
 		timestamp: time.getSeconds() //+ "." + time.getMilliseconds()
       };
-     alert(lastMessage.timestamp);
+     store(lastMessage);
       return;
     }
     target = $(target);
@@ -286,8 +286,8 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
       offsetX: Math.floor(offsetX),
       offsetY: Math.floor(offsetY), 
       timestamp: time.getSeconds()// + "." + time.getMilliseconds()
-	  };
-    alert(lastMessage.timestamp);
+    };
+    store(lastMessage);
   }
 
   function makeCursor(color) {
