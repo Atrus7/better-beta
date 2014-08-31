@@ -233,12 +233,6 @@ hr.small {
     }
 }
 
-/* Footer */
-
-footer {
-    padding: 100px 0;
-}
-
 /* Form.html CSS, just copy and paste any where in your style.css file, or customize to fit with your domain */
 form.contact p {
 font-size: 15px;
@@ -276,3 +270,9 @@ padding: 10px 25px 10px 25px;
 cursor: pointer;
 }
 /* End form.html's CSS */
+
+/* Footer */
+
+footer {
+    padding: 100px 0;
+}
