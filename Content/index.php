@@ -1,3 +1,4 @@
+
 <?php
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root');
@@ -40,7 +41,7 @@ for ($i=0; $i < count($arrofarr) - 1; $i++) {
           $arr = $arrofarr[$i];
           $encoded_array = json_encode($arr, JSON_PRETTY_PRINT);
           echo ("
-            <img id=\"fish" . $i . "\" class=\"fish\" src=\"Content/img/left_fish.png\">
+            <img id=\"fish" . $i . "\" class=\"fish\" src=\"img/left_fish.png\">
             <script> 
             var array" . $i . " = " . $encoded_array . ";
             </script>" );
@@ -57,6 +58,10 @@ for ($i=0; $i < count($arrofarr) - 1; $i++) {
 }
 </style>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+<!--        <script src="Beta-playback.js">         -->
+<?php ?>
 
 
 
@@ -222,16 +227,16 @@ function move(x,y,id) {
     var top = y - (offset.top);
     if(left > 0)
     {
-        img.attr("src","Content/img/left_fish.png");
+        img.attr("src","img/left_fish.png");
     }
     else
     {
-        img.attr("src","Content/img/right_fish.png")
+        img.attr("src","img/right_fish.png")
     }
     img.animate({
         top:  y +'px',
         left: x + 'px'
-    }, 250*d*(.01), 'linear');
+    }, 300*d*(.015), 'linear');
 }
 
 function die(id) {
@@ -249,12 +254,13 @@ function die(id) {
 
   dimg.animate({
   top: "-=" + offset.top * 4 + "px"  
-  }, 600, 'linear');
+  }, 2500, 'linear');
 }
 
 
 
 </script>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -332,7 +338,7 @@ function die(id) {
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Better Beta tracks real time feedback on user engagement, right on your own website.</h2>
-                    <p class="lead"><a target="_blank" href="https://enter.beepsend.com/hosts/290be3f3182e31979e45adcd9b53040c/cat_fishbowl_kopt.jpg">Enter the Fish Bowl</a>!</p>
+                    <button class="btn" onCLick="ripple()">Enter the Fish Bowl</button>
                 </div>
             </div>
             <!-- /.row -->
@@ -474,12 +480,14 @@ function die(id) {
     
     <!--Ripples that don't work-->
     <script>    
-        $(document).ready(function() {
-            $('.header').ripples({
-            resolution: 256,
-            perturbance: 0.04
-            });
-        });
+        function ripple(){
+		
+			$('.header').ripples({
+			resolution: 256,
+			perturbance: 0.04
+			
+		});
+	}
     </script>
     
     <!-- Custom Theme JavaScript -->

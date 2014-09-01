@@ -283,8 +283,8 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
     lastMessage = {
       type: "cursor-update",
       element: elementFinder.elementLocation(target),
-      x: Math.floor(offsetX),
-      y: Math.floor(offsetY), 
+      x: pageX,
+      y: pageY, 
       timestamp: time.getSeconds()// + "." + time.getMilliseconds()
     };
     store(lastMessage);

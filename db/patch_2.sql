@@ -1,0 +1,1 @@
+ALTER TABLE timestamp ADD COLUMN count INT NOT NULL;

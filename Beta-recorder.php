@@ -11,17 +11,19 @@ if(isset($_POST['timestamp']) && !empty($_POST['timestamp']))
   $rel_time = ceil($_POST['timestamp']);
   $x = $_POST['x'];
   $y = $_POST['y'];
-  $result = mysql_query("SELECT count FROM timestamp WHERE rel_time = $rel_time");
+  $result = mysql_query("SELECT * FROM user") or die(mysql_error());
   $obj = mysql_fetch_object($result);
-  $count = $obj->count +1;
+  $count = $obj->count + 1;
   $cid = 'cid' . $count;
 
-  mysql_query("INSERT INTO cursor_data (x, y, user_id) VALUES($x,$y, $count)");
-  mysql_query("INSERT INTO timestamp (rel_time, $cid, count) VALUES ($rel_time, $count, $count) ON DUPLICATE KEY UPDATE count=count+1");
+  mysql_query("INSERT INTO cursor_data (x, y, user_id) VALUES($x,$y, $count)") or die( http_response_code(404));
+  $id = mysql_insert_id();
+  mysql_query("INSERT INTO timestamp(rel_time, $cid) VALUES($rel_time, $id) ON DUPLICATE KEY UPDATE $cid=$id") or die(mysql_error());
+
 }
 else {
-    http_response_code(500);
+   
 }
 
 ?>
-<p> PHP IS NOT <? echo($alert);?> RUNNING...</p>
+<p> PHP IS RUNNING...</p>
